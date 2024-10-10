@@ -12,6 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                exit 1
             }
         }
         stage('Deploy') {
