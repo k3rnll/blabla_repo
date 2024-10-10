@@ -10,9 +10,17 @@ pipeline {
             }
         }
         stage('Test') {
+            agent {
+                docker {
+                    image 'gradle:8.2.0-jdk17-alpine'
+                    reuseNode true
+                }
+            }
+            steps {
+                sh 'gradle --version'
+            }
             steps {
                 echo 'Testing..'
-                exit 1
             }
         }
         stage('Deploy') {
