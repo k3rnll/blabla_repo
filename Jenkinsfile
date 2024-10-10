@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        name 'agent1'
+        label 'java17'
     }
 
     stages {
