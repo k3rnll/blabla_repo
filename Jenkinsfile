@@ -19,9 +19,6 @@ pipeline {
             steps {
                 sh 'gradle --version'
             }
-            steps {
-                echo 'Testing..'
-            }
         }
         stage('Deploy') {
             steps {
