@@ -18,7 +18,7 @@ pipeline {
             }
             steps {
                 sh 'gradle --version'
-                sleep 10
+                sleep 60
             }
         }
         stage('Deploy') {
